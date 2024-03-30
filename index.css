@@ -1,0 +1,147 @@
+body {
+   background-color: #010101;
+   font-family: sans-serif;
+   display: grid;
+   place-items: center;
+}
+
+/* number one */
+/* .container {
+   display: flex;
+   flex-flow: column;
+   gap: 100px;
+   margin-top: 40px;
+   align-items: center;
+}
+
+.square-wrapper-container {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+}
+
+.square {
+   height: 100px;
+   width: 100px;
+   border-radius: 18px;
+}
+
+.red {
+   background-color: rgb(255, 67, 67);
+}
+
+.green {
+   background-color: rgb(15, 175, 15);
+}
+
+.yellow {
+   background-color: rgb(234, 234, 35);
+}
+
+.square-container {
+   display: flex;
+   gap: 20px;
+}
+
+.description-wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+
+   h3 {
+      margin: 0;
+      color: rgb(255, 212, 212)
+   }
+
+   p {
+      margin: 0;
+      max-width: 475px;
+      color: #c7c7c7;
+   }
+}
+
+.cir-container {
+   display: flex;
+   gap: 24px;
+}
+
+.circle {
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+}
+
+.cir-1 {
+   background-color: rgb(235, 88, 15);
+}
+
+.cir-2 {
+   background-color: rgb(38, 202, 158);
+}
+
+.cir-3 {
+   background-color: rgb(51, 89, 227);
+}
+
+.cir-4 {
+   background-color: rgb(230, 86, 189);
+}
+
+.cir-5 {
+   background-color: rgb(149, 17, 17);
+}
+
+.cir-6 {
+   background: rgb(165, 59, 14);
+}
+
+.cir-7 {
+   background-color: rgb(1, 141, 206);
+} */
+
+.container {
+   height: 700px;
+   width: 500px;
+   position: relative;
+   background-color: rgb(40, 57, 57);
+}
+
+.ball-container {
+   display: flex;
+   position: relative;
+}
+
+.bottom,
+.top {
+   background: brown;
+   height: 20px;
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   border-radius: 20px 20px 0 0;
+}
+
+.top {
+   top: 0;
+   border-radius: 0 0 20px 20px;
+}
+
+.ball {
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
+   position: absolute;
+}
+
+.drop-balls-heading {
+   font-size: 64px;
+   font-weight: 700;
+   color: #fefefe;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translateY(-50%) translateX(-50%);
+   margin: 0 auto;
+   max-width: 75%;
+   text-align: center;
+}
