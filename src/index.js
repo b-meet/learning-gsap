@@ -84,35 +84,47 @@ document.addEventListener("DOMContentLoaded", function () {
 	// 		});
 	// 	})
 	// );
-
 	//NUMBER FOUR STAGGERS
-	const container = document.getElementById("container");
+	// const container = document.getElementById("container");
+	// for (let i = 0; i < 65; i++) {
+	// 	const sqr = document.createElement("div");
+	// 	sqr.classList.add("h-[80px]", "w-[80px]", "bg-slate-600", "sqr-items");
+	// 	container.append(sqr);
+	// }
+	// container.addEventListener("click", () => {
+	// 	gsap.to(".sqr-items", {
+	// 		scale: 0.05,
+	// 		y: 60,
+	// 		yoyo: true,
+	// 		repeat: -1,
+	// 		rotation: 25,
+	// 		repeatDelay: 1,
+	// 		stagger: {
+	// 			amount: 1.5,
+	// 			ease: "power.in",
+	// 			// each: 1, time between each sub-tween whereas amount is total which will be split between each subtween
+	// 			from: "start", //index, array ([0.5, 0.5] ~ center of the axis and so on) or key words ("start", "center", "edges", "random", or "end")
+	// 			grid: "auto",
+	// 			yoyo: true,
+	// 			repeat: -1,
+	// 			repeatDelay: 1,
+	// 			axis: null,
+	// 		},
+	// 		duration: 1,
+	// 		ease: "power1.inOut",
+	// 	});
+	// });
+	//NUMBER FIVE BIG SHIT TIMELINES!!!!!
 
-	for (let i = 0; i < 65; i++) {
-		const sqr = document.createElement("div");
-		sqr.classList.add("h-[80px]", "w-[80px]", "bg-slate-600", "sqr-items");
-		container.append(sqr);
-	}
-
-	container.addEventListener("click", () => {
-		gsap.to(".sqr-items", {
-			scale: 0.05,
-			y: 60,
-			yoyo: true,
-			repeat: -1,
-			rotation: 25,
-			stagger: {
-				amount: 1.5,
-				ease: "power.in",
-				// each: 1, time between each sub-tween whereas amount is total which will be split between each subtween
-				from: "start", //index, array ([0.5, 0.5] ~ center of the axis and so on) or key words ("start", "center", "edges", "random", or "end")
-				grid: "auto",
-				yoyo: true,
-				repeat: -1,
-				axis: null,
-			},
-			duration: 1,
-			ease: "power1.inOut",
-		});
+	const sacredTimeline = gsap.timeline({
+		repeat: -1,
+		yoyo: true,
+		repeatDelay: 0.5,
+		default: { stagger: 0.2, duration: 1, x: 300 }, //will be applied to all tweens in the time line
 	});
+
+	sacredTimeline
+		.to(".bg-slate-200", { x: 300 }, 1) //ABSOLUTE TIME after 1 sec of starting a timeline
+		.to(".bg-slate-400", { x: 300 }, "+=1") //GAP: adding a 1sec gap between this and previous tween
+		.to(".bg-slate-600", { x: 300 }, "-=1"); //OVERLAP: to go behing in timeline refers to previous rween
 });
