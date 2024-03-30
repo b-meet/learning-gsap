@@ -3,6 +3,7 @@ body {
    font-family: sans-serif;
    display: grid;
    place-items: center;
+   height: 100vh;
 }
 
 /* number one */
@@ -99,7 +100,8 @@ body {
    background-color: rgb(1, 141, 206);
 } */
 
-.container {
+/* number two ball dropping */
+/* .container {
    height: 700px;
    width: 500px;
    position: relative;
@@ -144,4 +146,4 @@ body {
    margin: 0 auto;
    max-width: 75%;
    text-align: center;
-}
+} */
