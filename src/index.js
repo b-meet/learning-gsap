@@ -72,18 +72,47 @@ document.addEventListener("DOMContentLoaded", function () {
 	// container.addEventListener("click", () => {
 	// 	dropTheBalls();
 	// });
-
 	//NUMBER THREE
-	const squares = document.getElementsByClassName("square");
+	// const squares = document.getElementsByClassName("square");
+	// Array.from(squares).map((item) =>
+	// 	item.addEventListener("click", () => {
+	// 		gsap.to(".square", {
+	// 			y: -200,
+	// 			opacity: 0,
+	// 			stagger: 0.1,
+	// 			ease: `power1.out`,
+	// 		});
+	// 	})
+	// );
 
-	Array.from(squares).map((item) =>
-		item.addEventListener("click", () => {
-			gsap.to(".square", {
-				y: -200,
-				opacity: 0,
-				stagger: 0.1,
-				ease: `power1.out`,
-			});
-		})
-	);
+	//NUMBER FOUR STAGGERS
+	const container = document.getElementById("container");
+
+	for (let i = 0; i < 65; i++) {
+		const sqr = document.createElement("div");
+		sqr.classList.add("h-[80px]", "w-[80px]", "bg-slate-600", "sqr-items");
+		container.append(sqr);
+	}
+
+	container.addEventListener("click", () => {
+		gsap.to(".sqr-items", {
+			scale: 0.05,
+			y: 60,
+			yoyo: true,
+			repeat: -1,
+			rotation: 25,
+			stagger: {
+				amount: 1.5,
+				ease: "power.in",
+				// each: 1, time between each sub-tween whereas amount is total which will be split between each subtween
+				from: "start", //index, array ([0.5, 0.5] ~ center of the axis and so on) or key words ("start", "center", "edges", "random", or "end")
+				grid: "auto",
+				yoyo: true,
+				repeat: -1,
+				axis: null,
+			},
+			duration: 1,
+			ease: "power1.inOut",
+		});
+	});
 });
