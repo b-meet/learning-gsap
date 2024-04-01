@@ -3,17 +3,11 @@ body {
    font-family: sans-serif;
    display: grid;
    place-items: center;
-   height: 100vh;
+   min-height: 100vh;
+   padding: 50px 0;
 }
 
 /* number one */
-/* .container {
-   display: flex;
-   flex-flow: column;
-   gap: 100px;
-   margin-top: 40px;
-   align-items: center;
-}
 
 .square-wrapper-container {
    display: flex;
@@ -98,10 +92,10 @@ body {
 
 .cir-7 {
    background-color: rgb(1, 141, 206);
-} */
+}
 
 /* number two ball dropping */
-/* .container {
+.container {
    height: 700px;
    width: 500px;
    position: relative;
@@ -136,7 +130,7 @@ body {
 }
 
 .drop-balls-heading {
-   font-size: 64px;
+   font-size: 44px;
    font-weight: 700;
    color: #fefefe;
    position: absolute;
@@ -146,4 +140,4 @@ body {
    margin: 0 auto;
    max-width: 75%;
    text-align: center;
-} */
+}
