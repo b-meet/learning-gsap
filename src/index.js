@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		repeat: -1,
 		yoyo: true,
 		repeatDelay: 0.5,
-		default: { stagger: 0.2, duration: 1 }, //will be applied to all tweens in the time line
+		defaults: { stagger: 0.2 }, //will be applied to all tweens in the time line
 	});
 	gsapTimeline
 		.to(".sqrs-200", { x: 300 }, 1) //ABSOLUTE TIME after 1 sec of starting a timeline
@@ -132,11 +132,63 @@ document.addEventListener("DOMContentLoaded", function () {
 		.to(".sqrs-600", { x: 300 }, "-=1"); //OVERLAP: to go behing in timeline refers to previous rween
 	//NUMBER SIX TIMELINE CONTROLS !!
 
-	const sacredTimeline = gsap.timeline({
-		repeat: -1,
-		yoyo: true,
-		repeatDelay: 0.15,
-		default: { duration: 4 },
+	const gsapTween = gsap.fromTo(
+		".host-obj",
+		{
+			x: -400,
+			repeat: -1,
+			yoyo: true,
+			duration: 1,
+		},
+		{
+			x: 400,
+			repeat: -1,
+			yoyo: true,
+			duration: 1,
+			onComplete: () => alert("completed"),
+			onStart: () =>
+				alert("time control for tweens animation will start"),
+			// onUpdate: () => alert("animstion is updating"),
+			// onRepeat: () => alert("repeatation started!!"),
+			// onReverseComplete: () => alert("reverse completed"),
+		}
+	);
+
+	const pause = document.querySelector("#pause");
+	const play = document.querySelector("#play");
+	const doubleSpeed = document.querySelector("#doubleSpeed");
+	const slowDown = document.querySelector("#slowDown");
+	const reverse = document.querySelector("#reverse");
+	const normalSpeed = document.querySelector("#normalSpeed");
+	const seek = document.querySelector("#seek");
+	const progress = document.querySelector("#progress");
+	const kill = document.querySelector("#kill");
+
+	pause.addEventListener("click", () => {
+		gsapTween.pause();
 	});
-	sacredTimeline.to(".host-obj", { x: 400, duration: 1 });
+	play.addEventListener("click", () => {
+		gsapTween.resume();
+	});
+	doubleSpeed.addEventListener("click", () => {
+		gsapTween.timeScale(2);
+	});
+	normalSpeed.addEventListener("click", () => {
+		gsapTween.timeScale(1);
+	});
+	slowDown.addEventListener("click", () => {
+		gsapTween.timeScale(0.25);
+	});
+	seek.addEventListener("click", () => {
+		gsapTween.seek(0.5);
+	});
+	reverse.addEventListener("click", () => {
+		gsapTween.reverse(); // (always goes back TO THE BEGINNING)
+	});
+	progress.addEventListener("click", () => {
+		gsapTween.progress(0.25);
+	});
+	kill.addEventListener("click", () => {
+		gsapTween.kill();
+	});
 });

@@ -7,8 +7,7 @@
    <script src="./index.js"></script>
    <link href="./output.css" rel="stylesheet">
    <link rel="stylesheet" href="./index.css">
-   <title>Document</title>
-
+   <title>Gsap Animation</title>
 </head>
 
 <!-- number one -->
@@ -73,12 +72,10 @@
       </section>
       <hr>
 
-
       <!-- number three -->
 
       <section class="flex flex-col gap-10 justify-center items-center">
          <h2 class="text-white mb-5 text-2xl font-bold">Ease</h2>
-
          <section class="flex gap-12">
             <div class="h-20 w-20 rounded-lg bg-slate-800 cursor-pointer hover:scale-110 squr"></div>
             <div class="h-20 w-20 rounded-lg bg-slate-700 cursor-pointer hover:scale-110 squr"></div>
@@ -113,26 +110,40 @@
       <!-- number six TIMELINE CONTROLS!! -->
       <section class="flex flex-col justify-center items-center gap-14">
          <h2 class="text-white mb-5 text-2xl font-bold">Timeline Controls</h2>
-         <section class="w-40 h-40 bg-red-400 rounded-md host-obj">
+         <section class="w-32 h-32 bg-red-400 rounded-md host-obj">
          </section>
          <div>
-            <h4>Controls</h4>
-            <div class="flex gap-5">
-               <button
+            <h4 class="text-white mb-2">Controls</h4>
+            <div class="flex gap-3">
+               <button id="pause"
                   class="py-2 px-5 rounded-full border border-green-400 text-white hover:bg-green-400 hover:text-black">Pause</button>
-               <button
+               <button id="play"
                   class="py-2 px-5 rounded-full border border-green-400 text-white hover:bg-green-400 hover:text-black">Play</button>
-               <button
+               <button id="doubleSpeed"
                   class="py-2 px-5 rounded-full border border-green-400 text-white hover:bg-green-400 hover:text-black">Double
                   speed</button>
-               <button
+               <button id="normalSpeed"
+                  class="py-2 px-5 rounded-full border border-green-400 text-white hover:bg-green-400 hover:text-black">Normal
+                  speed</button>
+               <button id="slowDown"
                   class="py-2 px-5 rounded-full border border-green-400 text-white hover:bg-green-400 hover:text-black">Slow
                   Down</button>
-               <button
+               <button id="reverse"
                   class="py-2 px-5 rounded-full border border-green-400 text-white hover:bg-green-400 hover:text-black">Reverse</button>
+               <button id="seek"
+                  class="py-2 px-5 rounded-full border border-green-400 text-white hover:bg-green-400 hover:text-black">Seek
+                  to 0.5s</button>
+               <button id="progress"
+                  class="py-2 px-5 rounded-full border border-green-400 text-white hover:bg-green-400 hover:text-black">Progress
+                  to 1/4</button>
+               <button id="kill"
+                  class="py-2 px-5 rounded-full border border-green-400 text-white hover:bg-green-400 hover:text-black">Kill
+               </button>
             </div>
          </div>
+         </div>
       </section>
+      <hr />
    </article>
    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </body>
