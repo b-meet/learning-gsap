@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+	//routting
+	const scrollTrigger = document.getElementById("scroll-trigger");
+	scrollTrigger.addEventListener("click", function () {
+		window.location.href = "scroll-trigger.html"; // Replace 'new-page.html' with your desired route
+	});
+
 	// NUMBER ONE
 	gsap.from(".square", { x: "random(-1500, -2000)" });
 	gsap.to(".square", {
@@ -146,8 +152,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			yoyo: true,
 			duration: 1,
 			onComplete: () => alert("completed"),
-			onStart: () =>
-				alert("time control for tweens animation will start"),
+			// onStart: () =>
+			// 	alert("time control for tweens animation will start"),
 			// onUpdate: () => alert("animstion is updating"),
 			// onRepeat: () => alert("repeatation started!!"),
 			// onReverseComplete: () => alert("reverse completed"),

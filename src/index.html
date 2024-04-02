@@ -13,7 +13,16 @@
 <!-- number one -->
 
 <body>
-   <article class="flex flex-col gap-40 w-full">
+   <article class="flex flex-col gap-32 w-full relative">
+      <nav class="sticky z-50 top-0 left-0 right-0 h-16 flex items-center justify-between bg-slate-800 px-20">
+         <h1 class="font-bold text-white">Learn GSAP</h1>
+         <div class="flex gap-3 items-center">
+            <button class="text-white py-1.5 px-7 border border-pink-500 rounded-full hover:bg-pink-500">Home</button>
+            <button id="scroll-trigger"
+               class="text-white py-1.5 px-7 border border-pink-500 rounded-full hover:bg-pink-500">Scroll
+               Trigger</button>
+         </div>
+      </nav>
       <section class="flex flex-col gap-10 justify-center items-center">
          <h2 class="text-white mb-5 text-2xl font-bold">First Animation</h2>
          <section class="square-wrapper-container">

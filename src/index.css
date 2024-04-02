@@ -4,7 +4,6 @@ body {
    display: grid;
    place-items: center;
    min-height: 100vh;
-   padding: 50px 0;
 }
 
 /* number one */
