@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-	//routting
+	//routing
 	const scrollTrigger = document.getElementById("scroll-trigger");
 	scrollTrigger.addEventListener("click", function () {
 		window.location.href = "scroll-trigger.html"; // Replace 'new-page.html' with your desired route

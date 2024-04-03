@@ -7,26 +7,30 @@
    <link href="./output.css" rel="stylesheet">
    <link rel="stylesheet" href="./index.css">
    <script src="./scroll.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-   <article class="flex flex-col gap-32 w-full relative">
+   <article class="flex flex-col gap-24 w-full relative">
       <nav class="sticky z-50 top-0 left-0 right-0 h-16 flex items-center justify-between bg-slate-800 px-20">
          <h1 class="font-bold text-white">Learn GSAP</h1>
-         <div class="flex gap-3 items-center">
-            <button class="text-white py-1.5 px-7 border border-pink-500 rounded-full hover:bg-pink-500">Home</button>
+         <div class="flex gap-2 items-center">
+            <button id="back-to-home"
+               class="text-white py-1.5 px-7 text-sm border border-pink-500 rounded-full hover:bg-pink-500">Home</button>
             <button id="scroll-trigger"
-               class="text-white py-1.5 px-7 border border-pink-500 rounded-full hover:bg-pink-500">Scroll
+               class="text-white py-1.5 px-7 text-sm border border-pink-500 rounded-full hover:bg-pink-500">Scroll
                Trigger</button>
          </div>
       </nav>
 
       <section class="flex flex-col gap-10 justify-center items-center">
          <h2 class="text-white mb-5 text-2xl font-bold">Scroll Trigger plugin</h2>
-         <section class="flex flex-col gap-80">
-            <div id="box-A" class="box w-20 h-20 rounded-lg bg-emerald-300 grid place-items-center">A</div>
-            <div id="box-B" class="box w-20 h-20 rounded-lg bg-emerald-500 grid place-items-center">B</div>
-            <div id="box-C" class="box w-20 h-20 rounded-lg bg-emerald-700 grid place-items-center">C</div>
+         <section class="flex flex-col gap-40">
+            <div id="box-A" class="box w-28 h-28 rounded-lg bg-emerald-100 grid place-items-center">Animation will</div>
+            <div id="box-B" class="box w-28 h-28 rounded-lg bg-emerald-300 grid place-items-center">only start</div>
+            <div id="box-C" class="box w-28 h-28 rounded-lg bg-emerald-500 grid place-items-center">When D is</div>
+            <div id="box-D" class="w-28 h-28 rounded-lg bg-emerald-700 text-white grid place-items-center">on Screen
+            </div>
          </section>
       </section>
       <hr>
