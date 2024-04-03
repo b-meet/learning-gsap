@@ -9,9 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	gsap.to(".box", { y: 30, yoyo: true, duration: 1, repeat: -1 });
 
 	gsap.to("#box-D", {
-		scrollTrigger: "#box-D",
-		x: 300,
+		scrollTrigger: {
+			trigger: "#box-D",
+			// first keyword - for enters viewport
+			// second keyword - for exits viewport
+			// first keyword - for enters back from bottom viewport
+			// fourth keyword - pata nai did get it
+			toggleActions: "play pause reverse pause", //play pause resume reverse restart reset complete none
+		},
+		x: 400,
 		rotation: 360,
-		duration: 2,
+		duration: 1,
 	});
 });

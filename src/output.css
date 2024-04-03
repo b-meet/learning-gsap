@@ -628,6 +628,18 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mb-96 {
+  margin-bottom: 24rem;
+}
+
+.mb-\[2500px\] {
+  margin-bottom: 2500px;
+}
+
+.mb-\[1500px\] {
+  margin-bottom: 1500px;
+}
+
 .flex {
   display: flex;
 }
@@ -734,6 +746,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.scroll-mb-96 {
+  scroll-margin-bottom: 24rem;
 }
 
 .flex-col {
