@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			// first keyword - for enters back from bottom viewport
 			// fourth keyword - pata nai did get it
 			toggleActions: "play pause reverse pause", //play pause resume reverse restart reset complete none
+			markers: true,
+			start: "top center", //first is the element itself second is the viewport
+			end: "bottom 20%",
 		},
 		x: 400,
 		rotation: 360,
