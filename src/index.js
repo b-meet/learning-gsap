@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+	gsap.registerPlugin(ScrollTrigger);
 	//routing
-	const scrollTrigger = document.getElementById("scroll-trigger");
-	scrollTrigger.addEventListener("click", function () {
+	const scrollTrigBtn = document.getElementById("scroll-trigger");
+	scrollTrigBtn.addEventListener("click", function () {
 		window.location.href = "scroll-trigger.html"; // Replace 'new-page.html' with your desired route
 	});
 
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		stagger: 0.1,
 	});
 	//NUMBER TWO EASE
-	const container = document.querySelector(".container");
+	// const container = document.querySelector(".container");
 	const ballContainer = document.querySelector(".ball-container");
 	const hexColorDigits = "0123456789abcdef";
 	function createBall() {
@@ -54,30 +55,60 @@ document.addEventListener("DOMContentLoaded", function () {
 		newBall.className = "ball";
 		newBall.style.left =
 			Math.random() * (ballContainer.offsetWidth - 30) + "px";
-		newBall.style.top = Math.random() * 0 + 20 + "px";
+		newBall.style.top = Math.random() * 0 + 10 + "px";
 		newBall.style.backgroundColor = generatedColor + "aa";
 		ballContainer.appendChild(newBall);
 	}
-	for (let i = 0; i < 20; i++) {
+	for (let i = 0; i < 60; i++) {
 		createBall();
 	}
-	const dropTheBalls = () => {
-		gsap.fromTo(
-			".ball",
-			{ x: 0, y: 0 },
-			{
-				x: 0,
-				y: 620,
-				ease: "bounce.out",
-				yoyo: true,
-				duration: 3,
-				stagger: 0.04,
-			}
-		);
-	};
-	container.addEventListener("click", () => {
-		dropTheBalls();
-	});
+	// const dropTheBalls = () => {
+	// 	gsap.fromTo(
+	// 		".ball",
+	// 		{ x: 0, y: 0 },
+	// 		{
+	// 			x: 0,
+	// 			y: 620,
+	// 			scrollTrigger: {
+	// 				trigger: ".balls-container",
+	// 				// endTrigger: "#box-D",
+	// 				// toggleActions: "play pause reverse pause",
+	// 				markers: true,
+	// 				start: "top center",
+	// 				// end: "+=150 200", // 150px from start|
+	// 				// // scrub: true,
+	// 				// scrub: 2, //adds on smoothness
+	// 			},
+	// 			ease: "bounce.out",
+	// 			yoyo: true,
+	// 			duration: 3,
+	// 			stagger: 0.04,
+	// 		}
+	// 	);
+	// };
+	gsap.fromTo(
+		".ball",
+		{ x: 0, y: 0 },
+		{
+			x: 0,
+			y: 650,
+			scrollTrigger: {
+				trigger: "#balls-container",
+				// endTrigger: "#box-D",
+				// toggleActions: "play pause reverse pause",
+				start: "top center",
+				end: "bottom 200",
+				scrub: 2,
+			},
+			ease: "bounce.out",
+			yoyo: true,
+			duration: 3,
+			stagger: 0.01,
+		}
+	);
+	// container.addEventListener("click", () => {
+	// 	dropTheBalls();
+	// });
 	//NUMBER THREE
 	const squares = document.getElementsByClassName("squr");
 	Array.from(squares).map((item) =>

@@ -94,13 +94,6 @@ body {
 }
 
 /* number two ball dropping */
-.container {
-   height: 700px;
-   width: 500px;
-   position: relative;
-   background-color: rgb(40, 57, 57);
-}
-
 .ball-container {
    display: flex;
    position: relative;
@@ -108,8 +101,8 @@ body {
 
 .bottom,
 .top {
-   background: brown;
-   height: 20px;
+   background: rgb(226, 103, 103);
+   height: 10px;
    width: 100%;
    position: absolute;
    bottom: 0;
