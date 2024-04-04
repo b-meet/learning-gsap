@@ -24,14 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	// 	rotation: 360,
 	// 	duration: 1,
 	// });
-	gsap.to("#box-C", {
+	gsap.to("#box-D", {
 		scrollTrigger: {
-			trigger: "#box-B",
+			trigger: "#box-D",
 			endTrigger: "#box-D",
-			toggleActions: "play pause reverse pause", //play pause resume reverse restart reset complete none
+			toggleActions: "play pause reverse pause",
 			markers: true,
-			start: "bottom 500px", //first is the element itself second is the viewport
-			end: "top 20%",
+			start: "top center",
+			end: "+=150 200", // 150px from start|
+			// scrub: true,
+			scrub: 2, //adds on smoothness
 		},
 		x: 400,
 		rotation: 360,
