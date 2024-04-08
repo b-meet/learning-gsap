@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		newBall.style.backgroundColor = generatedColor + "aa";
 		ballContainer.appendChild(newBall);
 	}
-	for (let i = 0; i < 60; i++) {
+	for (let i = 0; i < 80; i++) {
 		createBall();
 	}
 	// const dropTheBalls = () => {
@@ -94,8 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			y: 650,
 			scrollTrigger: {
 				trigger: "#balls-container",
-				// endTrigger: "#box-D",
-				// toggleActions: "play pause reverse pause",
 				start: "top center",
 				end: "bottom 200",
 				scrub: 2,
@@ -112,15 +110,48 @@ document.addEventListener("DOMContentLoaded", function () {
 	//NUMBER THREE
 	const squares = document.getElementsByClassName("squr");
 	Array.from(squares).map((item) =>
-		item.addEventListener("click", () => {
-			gsap.to(".squr", {
-				y: -200,
-				opacity: 0,
-				stagger: 0.1,
-				ease: `power1.out`,
-			});
+		gsap.to(".squr", {
+			y: -450,
+			opacity: 0,
+			scrollTrigger: {
+				trigger: ".squr",
+				start: "top 75%",
+				end: "bottom 50%",
+				scrub: "0.5",
+			},
+			stagger: 0.5,
+			ease: "steps(16)",
 		})
 	);
+
+	const text = document.getElementsByClassName("draped-text");
+	Array.from(text).map((item) =>
+		gsap.fromTo(
+			".draped-text",
+			{ opacity: 0 },
+			{
+				opacity: 1,
+				scrollTrigger: {
+					trigger: ".draped-text",
+					start: "center 80%",
+					end: "+=200 65%",
+					scrub: true,
+				},
+				stagger: 0.5,
+				ease: `power1.out`,
+			}
+		)
+	);
+	// Array.from(squares).map((item) =>
+	// 	item.addEventListener("click", () => {
+	// 		gsap.to(".squr", {
+	// 			y: -200,
+	// 			opacity: 0,
+	// 			stagger: 0.1,
+	// 			ease: `power1.out`,
+	// 		});
+	// 	})
+	// );
 	//NUMBER FOUR STAGGERS
 	const staggerContainer = document.getElementById("staggerContainer");
 	for (let i = 0; i < 65; i++) {
