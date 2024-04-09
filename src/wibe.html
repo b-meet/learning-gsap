@@ -35,8 +35,8 @@
       </section>
       <section class="text-white px-40 flex gap-5">
          <div class="flex flex-col gap-4 pt-10">
-            <h2 id="about-us-heading" class="font-bold text-8xl">About Us</h2>
-            <div class="flex flex-col gap-10 w-[520px]">
+            <h2 id="about-us-heading" class="font-bold text-8xl relative z-40">About Us</h2>
+            <div id="desc-wrapper" class="flex flex-col gap-10 w-[520px] relative z-40">
                <p>We're fashion studio based in california. We create unique designs that will blow your mind. We also
                   design
                   unique
@@ -57,12 +57,15 @@
             </div>
          </div>
          <div class="max-w-[50%] min-w-[300px] relative">
-            <img src="../assets/girl-hat.jpg" alt="">
-            <img src="../assets/boy-glasses.jpg" alt="" class="max-w-52 absolute top-1/2 -left-28 z-10">
-            <img src="../assets/girl-glasses.jpg" alt="" class="max-w-52 absolute top-[10%] -right-28 z-10">
+            <img id="main-img" src="../assets/girl-hat.jpg" alt="">
+            <img id="left-img" src="../assets/girl-glasses.jpg" alt=""
+               class="max-w-52 absolute top-[75%] -left-28 z-10">
+            <img id="right-img" src="../assets/boy-glasses.jpg" alt=""
+               class="max-w-52 absolute top-20 -right-28 z-10 rounded-lg">
          </div>
-         <div class="h-[1000px]"></div>
       </section>
+      <div class="h-[2000px]"></div>
+
 
    </article>
    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>

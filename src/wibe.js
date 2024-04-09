@@ -14,4 +14,41 @@ document.addEventListener("DOMContentLoaded", () => {
 		console.log("log");
 		window.location.href = "wibe.html";
 	});
+
+	// images
+	gsap.to("#about-us-heading", {
+		x: 200,
+		scrollTrigger: {
+			trigger: "#right-img",
+			scrub: 1,
+			start: "top 80%",
+		},
+	});
+
+	gsap.to("#right-img", {
+		y: 250,
+		scrollTrigger: {
+			trigger: "#right-img",
+			scrub: 1,
+			start: "top 80%",
+		},
+	});
+
+	gsap.to("#left-img", {
+		y: -200,
+		scrollTrigger: {
+			trigger: "#right-img",
+			scrub: 1,
+			start: "top 80%",
+		},
+	});
+
+	gsap.to("#desc-wrapper", {
+		y: 300,
+		scrollTrigger: {
+			trigger: "#right-img",
+			scrub: 1,
+			start: "bottom 75%",
+		},
+	});
 });
