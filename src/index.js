@@ -160,6 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			"h-[80px]",
 			"w-[80px]",
 			"bg-blue-500",
+			"rounded-lg",
 			"stagger-sqr-items"
 		);
 		staggerContainer.append(sqr);
@@ -171,7 +172,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			yoyo: true,
 			repeat: -1,
 			rotation: 25,
-			repeatDelay: 1,
 			stagger: {
 				amount: 1.5,
 				ease: "power.in",
