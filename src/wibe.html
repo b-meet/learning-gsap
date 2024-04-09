@@ -10,7 +10,7 @@
 </head>
 
 <body>
-   <article class="flex flex-col gap-32 w-full relative">
+   <article class="flex flex-col w-full relative">
       <nav class="sticky z-50 top-0 left-0 right-0 h-16 flex items-center justify-between bg-slate-800 px-20">
          <h1 class="font-bold text-white">Learn GSAP</h1>
          <div class="flex gap-3 items-center">
@@ -23,6 +23,47 @@
                class="text-white py-1.5 text-sm px-7 border border-pink-500 rounded-full hover:bg-pink-500">Example</button>
          </div>
       </nav>
+      <section class="h-[calc(100vh-64px)] flex items-center justify-center relative">
+         <video autoplay muted loop id="myVideo"
+            class="absolute inset-0 opacity-50 -z-10 max-h-[calc(100vh-64px)] min-w-full object-cover">
+            <source src="../assets/8303104-hd_1920_1080_24fps.mp4" type="video/mp4">
+         </video>
+         <div class="flex flex-col items-center gap-12 text-white ">
+            <h1 class="font-extrabold text-9xl">Wibe</h1>
+            <p class="text-lg">Inspire. Create. Belive</p>
+         </div>
+      </section>
+      <section class="text-white px-40 flex gap-5">
+         <div class="flex flex-col gap-4 pt-10">
+            <h2 id="about-us-heading" class="font-bold text-8xl">About Us</h2>
+            <div class="flex flex-col gap-10 w-[520px]">
+               <p>We're fashion studio based in california. We create unique designs that will blow your mind. We also
+                  design
+                  unique
+                  jewellary pieces. Fashion is an ART that can not be grasped by everyone.
+               </p>
+               <p>We are very dedicated to making our products. We offer unique and creative products to a wide range of
+                  people. We have a
+                  variety of styles, but for most people, all of the options are in the box. We specialize in making
+                  things
+                  that make you
+                  happy.
+               </p>
+               <p>We strive to build on our vision. As a fashion label, we do our best to create amazing experiences for
+                  all
+                  people. We
+                  are always looking to make something that is easy for everyone.
+               </p>
+            </div>
+         </div>
+         <div class="max-w-[50%] min-w-[300px] relative">
+            <img src="../assets/girl-hat.jpg" alt="">
+            <img src="../assets/boy-glasses.jpg" alt="" class="max-w-52 absolute top-1/2 -left-28 z-10">
+            <img src="../assets/girl-glasses.jpg" alt="" class="max-w-52 absolute top-[10%] -right-28 z-10">
+         </div>
+         <div class="h-[1000px]"></div>
+      </section>
+
    </article>
    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
