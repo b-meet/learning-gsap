@@ -21,25 +21,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		scrollTrigger: {
 			trigger: "#right-img",
 			scrub: 1,
-			start: "top 80%",
+			start: "top bottom",
 		},
 	});
 
 	gsap.to("#right-img", {
-		y: 250,
+		y: 400,
 		scrollTrigger: {
 			trigger: "#right-img",
 			scrub: 1,
-			start: "top 80%",
+			start: "top bottom",
 		},
 	});
 
 	gsap.to("#left-img", {
-		y: -200,
+		y: -300,
 		scrollTrigger: {
 			trigger: "#right-img",
 			scrub: 1,
-			start: "top 80%",
+			start: "top bottom",
 		},
 	});
 

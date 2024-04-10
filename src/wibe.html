@@ -9,7 +9,7 @@
    <script src="./wibe.js"></script>
 </head>
 
-<body>
+<body class="max-w-[1600px] m-auto">
    <article class="flex flex-col w-full relative">
       <nav class="sticky z-50 top-0 left-0 right-0 h-16 flex items-center justify-between bg-slate-800 px-20">
          <h1 class="font-bold text-white">Learn GSAP</h1>
@@ -36,7 +36,7 @@
       <section class="text-white px-40 flex gap-5">
          <div class="flex flex-col gap-4 pt-10">
             <h2 id="about-us-heading" class="font-bold text-8xl relative z-40">About Us</h2>
-            <div id="desc-wrapper" class="flex flex-col gap-10 w-[520px] relative z-40">
+            <div id="desc-wrapper" class="flex flex-col gap-10 w-[520px] text-lg relative z-40">
                <p>We're fashion studio based in california. We create unique designs that will blow your mind. We also
                   design
                   unique
@@ -59,14 +59,56 @@
          <div class="max-w-[50%] min-w-[300px] relative">
             <img id="main-img" src="../assets/girl-hat.jpg" alt="">
             <img id="left-img" src="../assets/girl-glasses.jpg" alt=""
-               class="max-w-52 absolute top-[75%] -left-28 z-10">
+               class="max-w-52 absolute top-[75%] -left-28 z-10 rounded-lg">
             <img id="right-img" src="../assets/boy-glasses.jpg" alt=""
                class="max-w-52 absolute top-20 -right-28 z-10 rounded-lg">
          </div>
       </section>
-      <div class="h-[2000px]"></div>
-
-
+      <section class="flex bg-red text-white min-h-[calc(100vh-64px)]">
+         <div class="flex-1 max-w-[500px] flex flex-col gap-10 items-center justify-center bg-[#202020] px-20 relative">
+            <h2 class="font-bold text-6xl absolute top-0 left-0 right-0">New Collection</h2>
+            <div class="flex flex-col gap-6 text-lg w-[400px]">
+               <p>The brand new collection is currently being developed in USA. We create our products using best
+                  quality material,
+                  including the use of some of the pure fabrics to make our products. All products are made using the
+                  best materials, from
+                  the finest cotton to the finest fabrics.
+               </p>
+               <p>We have lots of different clothing options like shoes, jackets and dresses. Not only clothes but we
+                  also provide unique
+                  Jewellery as well. It is great for us to carry our new clothes all around the country and look
+                  different.
+               </p>
+            </div>
+         </div>
+         <div class="flex-[3] max-w-[calc(100vw-500px)] bg-[#bebebe] flex items-center gap-10 overflow-x-auto p-10">
+            <div class="min-w-96 max-w-96 flex flex-col gap-3 items-center">
+               <img class="max-w-96 min-w-96 max-h-[475px] object-cover rounded-lg"
+                  src="../assets/carouselImages/img1.jpg" alt="">
+               <p class="text-black font-medium text-lg">Trendy</p>
+            </div>
+            <div class="min-w-96 max-w-96 flex flex-col gap-3 items-center">
+               <img class="max-w-96 min-w-96 max-h-[475px] object-cover rounded-lg"
+                  src="../assets/carouselImages/img2.jpg" alt="">
+               <p class="text-black font-medium text-lg">Regular</p>
+            </div>
+            <div class="min-w-96 max-w-96 flex flex-col gap-3 items-center">
+               <img class="max-w-96 min-w-96 max-h-[475px] object-cover rounded-lg"
+                  src="../assets/carouselImages/img3.jpg" alt="">
+               <p class="text-black font-medium text-lg">Traditional</p>
+            </div>
+            <div class="min-w-96 max-w-96 flex flex-col gap-3 items-center">
+               <img class="max-w-96 min-w-96 max-h-[475px] object-cover rounded-lg"
+                  src="../assets/carouselImages/img4.jpg" alt="">
+               <p class="text-black font-medium text-lg">For Mens</p>
+            </div>
+            <div class="min-w-96 max-w-96 flex flex-col gap-3 items-center">
+               <img class="max-w-96 min-w-96 max-h-[475px] object-cover rounded-lg"
+                  src="../assets/carouselImages/img5.jpg" alt="">
+               <p class="text-black font-medium text-lg">Ethnic Wear</p>
+            </div>
+         </div>
+      </section>
    </article>
    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
