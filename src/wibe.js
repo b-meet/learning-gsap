@@ -51,4 +51,21 @@ document.addEventListener("DOMContentLoaded", () => {
 			start: "bottom 75%",
 		},
 	});
+
+	gsap.fromTo(
+		"#new-collection",
+		{
+			y: -50,
+			x: 100,
+		},
+		{
+			x: 100,
+			y: 100,
+			scrollTrigger: {
+				trigger: "#new-collection",
+				scrub: 1,
+				start: "top 95%",
+			},
+		}
+	);
 });
