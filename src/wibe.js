@@ -15,42 +15,37 @@ document.addEventListener("DOMContentLoaded", () => {
 		window.location.href = "wibe.html";
 	});
 
-	// images
-	gsap.to("#about-us-heading", {
+	const aboutTimeline = gsap.timeline({
+		scrollTrigger: {
+			trigger: "#right-img",
+			scrub: 1,
+			start: "top bottom",
+		},
+	});
+	aboutTimeline.to("#about-us-heading", {
 		x: 200,
-		scrollTrigger: {
-			trigger: "#right-img",
-			scrub: 1,
-			start: "top bottom",
-		},
 	});
-
-	gsap.to("#right-img", {
-		y: 400,
-		scrollTrigger: {
-			trigger: "#right-img",
-			scrub: 1,
-			start: "top bottom",
+	aboutTimeline.to(
+		"#right-img",
+		{
+			y: 200,
 		},
-	});
-
-	gsap.to("#left-img", {
-		y: -300,
-		scrollTrigger: {
-			trigger: "#right-img",
-			scrub: 1,
-			start: "top bottom",
+		"<"
+	);
+	aboutTimeline.to(
+		"#left-img",
+		{
+			y: -300,
 		},
-	});
-
-	gsap.to("#desc-wrapper", {
-		y: 300,
-		scrollTrigger: {
-			trigger: "#right-img",
-			scrub: 1,
-			start: "bottom 75%",
+		"<"
+	);
+	aboutTimeline.to(
+		"#desc-wrapper",
+		{
+			y: 200,
 		},
-	});
+		"<"
+	);
 
 	gsap.fromTo(
 		"#new-collection",
