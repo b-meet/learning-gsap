@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	aboutTimeline.to(
 		"#left-img",
 		{
-			y: -300,
+			y: -500,
 		},
 		"<"
 	);
@@ -46,6 +46,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		},
 		"<"
 	);
+
+	gsap.to("#new-collection-section", {
+		scrollTrigger: {
+			trigger: "#new-collection-section",
+			pin: true,
+			start: "top top",
+			end: "bottom 50%",
+		},
+		x: 0,
+	});
 
 	gsap.fromTo(
 		"#new-collection",
