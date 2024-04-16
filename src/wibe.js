@@ -51,10 +51,30 @@ document.addEventListener("DOMContentLoaded", () => {
 		scrollTrigger: {
 			trigger: "#new-collection-section",
 			pin: true,
-			start: "top top",
-			end: "bottom 50%",
+			start: "top",
 		},
 		x: 0,
+	});
+
+	const newCollectionImg =
+		document.getElementsByClassName("new-collection-img");
+
+	const newCollectionImgContainer = document.querySelector(
+		"#new-collection-img-container"
+	);
+	console.log(Array.from(newCollectionImg), "newCollectionImg");
+	Array.from(newCollectionImg).map((item) => {
+		gsap.to(item, {
+			xPercent: () =>
+				-newCollectionImgContainer.scrollWidth +
+				newCollectionImgContainer.clientWidth +
+				550,
+			scrollTrigger: {
+				tigger: "#new-collection-section",
+				scrub: 1,
+				start: "50% top",
+			},
+		});
 	});
 
 	gsap.fromTo(
