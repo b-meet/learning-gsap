@@ -11,7 +11,7 @@
 
 <body class="max-w-[1600px] m-auto">
    <article class="flex flex-col w-full relative">
-      <nav class="sticky z-50 top-0 left-0 right-0 h-16 flex items-center justify-between bg-slate-800 px-20">
+      <nav class="z-50 w-full h-16 flex items-center justify-between bg-slate-800 px-20">
          <h1 class="font-bold text-white">Learn GSAP</h1>
          <div class="flex gap-3 items-center">
             <button id="back-to-home"
@@ -33,7 +33,7 @@
             <p class="text-lg">Inspire. Create. Belive</p>
          </div>
       </section>
-      <section class="text-white px-40 flex gap-5">
+      <section class="text-white px-40 flex gap-5 min-h-screen">
          <div class="flex flex-col gap-4 pt-10">
             <h2 id="about-us-heading" class="font-bold text-8xl relative z-40">About Us</h2>
             <div id="desc-wrapper" class="flex flex-col gap-10 w-[520px] text-lg relative z-40">
@@ -64,9 +64,10 @@
                class="max-w-52 absolute top-20 -right-28 z-10 rounded-lg">
          </div>
       </section>
-      <section id="new-collection-section" class="flex bg-red text-white min-h-[calc(100vh-64px)] sticky top-16">
+      <section id="new-collection-section" class="flex bg-red text-white min-h-screen">
          <div class="flex-1 max-w-[500px] flex flex-col gap-10 items-center justify-center bg-[#202020] px-20 relative">
-            <h2 id="new-collection" class="font-bold text-6xl absolute top-0 left-0 right-0 z-50">New Collection</h2>
+            <h2 id="new-collection-heading" class="font-bold text-6xl absolute top-0 left-0 right-0 z-50">New Collection
+            </h2>
             <div class="flex flex-col gap-6 text-lg w-[400px]">
                <p>The brand new collection is currently being developed in USA. We create our products using best
                   quality material,
@@ -110,7 +111,7 @@
             </div>
          </div>
       </section>
-      <!-- <section class="min-h-[calc(100vh-64px)] bg-[#CCBEE9] grid place-items-center relative">
+      <section id="clothing-image-container" class="min-h-screen bg-[#CCBEE9] grid place-items-center relative">
          <img src="../assets//fashionImages/img7.jpg" id="img7" class="rounded-lg shadow-md h-64 absolute" alt="">
          <img src="../assets//fashionImages/img6.jpg" id="img6" class="rounded-lg shadow-md h-64 absolute" alt="">
          <img src="../assets//fashionImages/img5.jpg" id="img5" class="rounded-lg shadow-md h-64 absolute" alt="">
@@ -118,11 +119,12 @@
          <img src="../assets//fashionImages/img3.jpg" id="img3" class="rounded-lg shadow-md h-64 absolute" alt="">
          <img src="../assets//fashionImages/img2.jpg" id="img2" class="rounded-lg shadow-md h-64 absolute" alt="">
          <img src="../assets//fashionImages/img1.jpg" id="img1" class="rounded-lg shadow-md h-64 absolute" alt="">
-      </section> -->
-      <div class="h-[1000px]"></div>
+      </section>
+      <div class="h-[1000px]""></div>
    </article>
-   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+   <script src=" https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js">
+   </script>
+         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </body>
 
 </html>
