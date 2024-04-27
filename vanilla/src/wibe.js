@@ -102,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					scrub: 2,
 					start: "50% top",
 				},
+				filter: "grayscale(0%)",
 			}
 		);
 	});
